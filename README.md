@@ -14,7 +14,7 @@ The HLS playlist can be useful for several reasons, including:
 * Integration with [Android TV Live Channels](https://play.google.com/store/apps/details?id=com.google.android.tv) via [Cumulus TV](https://play.google.com/store/apps/details?id=com.felkertech.n.cumulustv)
 
 ## Install
-The extension is available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/get-hls-from-youtbe/dhjnjclmedbgdbmipdmdmoejnadcjnja)
+The extension is available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/get-hls-from-youtbe/dhjnjclmedbgdbmipdmdmoejnadcjnja). Try it out on some [Live Youtube videos](https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig).
 
 ## Screenshots
 ![screenshot](https://raw.githubusercontent.com/jwennis/gethlsfromyoutube/master/images/screen.png "Screenshot")
