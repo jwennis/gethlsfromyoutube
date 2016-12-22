@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/popup.js"></script>
+    
+    <link rel="stylesheet" href="styles/popup.css" type="text/css" />
+    
+</head>
+
+<body>
+
+    <div id="container">
+            
+        <div id="loader">
+
+            <svg width="64px" height="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-balls">
+                <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                <g transform="rotate(0 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#fff;#999"></animate>
+                    </circle>
+                </g>
+                <g transform="rotate(60 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#999;#000"></animate>
+                    </circle>
+                </g>
+                <g transform="rotate(120 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#000;#fff"></animate>
+                    </circle>
+                </g>
+                <g transform="rotate(180 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#fff;#999"></animate>
+                    </circle>
+                </g>
+                <g transform="rotate(240 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#999;#000"></animate>
+                    </circle>
+                </g>
+                <g transform="rotate(300 50 50)">
+                    <circle r="5" cx="30" cy="50" transform="translate(2.35492 -4.07885)">
+                        <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;9.999999999999998 -17.32050807568877" keyTimes="0;1"></animateTransform>
+                        <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#000;#fff"></animate>
+                    </circle>
+                </g>
+            </svg>
+        
+            <br />
+            
+            <span>Sending request</span>
+            
+        </div>        
+        
+        <div id="result"></div>
+        
+        <div id="error">
+            
+            <span class="title">ERROR</span>
+            <span class="message"></span>            
+            <span class="retry">Try Again</span>
+            
+        </div>        
+        
+    </div>
+        
+</body>
+
+</html>
