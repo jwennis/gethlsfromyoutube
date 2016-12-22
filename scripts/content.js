@@ -5,8 +5,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         
     if(!!request.FetchHls) {
         
-        fetch("https://www.youtube.com/get_video_info?&video_id="
-                + getParam("v") + "&el=info&ps=default&eurl=&gl=US&hl=en");
+        if(location.href.indexOf("https://www.youtube.com/watch") != 0) {
+                
+                // If the current tab is not a Youtube video, let the popup window know
+                
+                sendResponse({ Error: true, message: "This is not a Youtube video" });
+            
+        } else {
+            
+            fetch("https://www.youtube.com/get_video_info?&video_id="
+                  + getParam("v") + "&el=info&ps=default&eurl=&gl=US&hl=en");
+        }
     }
 });
 

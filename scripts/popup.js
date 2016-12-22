@@ -45,23 +45,26 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 
 /**
-*   Send a request to the event script to fetch the HLS URL
+*   Send a request to the content script to fetch the HLS URL
 */
 function init() {
     
     responseReceived = false;
     
-    chrome.runtime.sendMessage({ FetchHls: true }, function(response) {
+    chrome.tabs.getSelected(null, function(tab) {
         
-        if(!!response && !!response.Error) {
-            
-            // The event script will indicate if the 
-            // current tab is not a Youtube video
-            
-            responseReceived = true;
-            
-            throwError(response.message);
-        }
+        chrome.tabs.sendMessage(tab.id, { FetchHls: true }, function(response) {
+        
+            if(!!response && !!response.Error) {
+
+                // The content script will indicate if the 
+                // current tab is not a Youtube video
+
+                responseReceived = true;
+
+                throwError(response.message);
+            }
+        });
     });
     
     setTimeout(throwTimeout, TIMEOUT_DURATION);
