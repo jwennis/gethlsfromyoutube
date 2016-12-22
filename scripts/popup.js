@@ -53,7 +53,7 @@ function init() {
     
     chrome.runtime.sendMessage({ FetchHls: true }, function(response) {
         
-        if(!!response.Error) {
+        if(!!response && !!response.Error) {
             
             // The event script will indicate if the 
             // current tab is not a Youtube video
@@ -75,15 +75,28 @@ function displayResult(hlsUrl) {
     
     $("#loader").hide();
         
-    $("#result").text(hlsUrl)
-        .css({ display: "block" });
-
-    $("#result").click(function () {
+    $("#content").append(hlsUrl);    
+    $("#content").click(function () {
 
         var range = document.createRange();
-        range.selectNode(this);
-        window.getSelection().addRange(range);            
+        range.selectNode($("#content")[0]);
+        window.getSelection().addRange(range);
     });
+    
+    $("#copy").click(function () {
+                
+        document.oncopy = function(event) {
+            
+            event.clipboardData.setData("text/plain", hlsUrl);
+            event.preventDefault();
+        };
+        
+        document.execCommand("Copy", false, null);
+        
+        $("#copy").text("Copied!").css({ "background-color": "#268417" });
+    });
+    
+    $("#result").css({ display: "block" });
 }
 
 

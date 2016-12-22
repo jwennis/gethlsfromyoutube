@@ -16,7 +16,9 @@
         
         "declarativeContent",
         "background",
-        "tabs"
+        "tabs",
+        "clipboardRead",
+        "clipboardWrite"
     ],
         
     "page_action": {

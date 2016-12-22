@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Mono");
 
 #container {
 
@@ -33,18 +33,42 @@
     height: 116px;
     padding: 4px;
 
-    font: 10px Roboto Mono;
-
     overflow-wrap: break-word;
     overflow: auto;
     display: none;
+}
+
+#result div.copy-container {
+
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#copy {
+    
+    padding: 5px;
+
+    font-size: 12px;
+    font-weight: bold !important;
+    color: #ffffff;
+    
+    background-color: #1100bb;
+
+    cursor: pointer;
+    
+}
+
+#content {
+    
+    font: 10px Roboto Mono;
 }
 
 #error {
 
     width: 200px;
 
-    text-align: center;            
+    text-align: center;
     overflow: auto;            
     display: none;
 }
@@ -53,7 +77,8 @@
 
     padding: 5px;
 
-    font-weight: bold;            
+    font-size: 12px;
+    font-weight: bold;          
     color: #ee0000;
 }
 
@@ -67,7 +92,8 @@
     display: block;
     padding: 5px;
 
-    font-weight: bold; 
+    font-size: 12px;
+    font-weight: bold;
 
     cursor: pointer;
 }
