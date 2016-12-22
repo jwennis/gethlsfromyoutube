@@ -1,4 +1,4 @@
-# gethlsfromyoutube
+# Get HLS from Youtube
 A simple chrome extension to retrieve the HLS URL for live Youtube streams.
 
 ## About
